@@ -1,0 +1,160 @@
+/* Global variables */
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-d-blue: hsl(229, 23%, 23%);
+  --dark-g-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: hsl(100%, 100%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;
+  color: var(--very-dark-d-blue);
+  background-image: url('/images/bg-pattern-top.svg'),
+    url('/images/bg-pattern-bottom.svg');
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: 130% 160%, -30% -90%;
+  background-color: var(--dark-cyan);
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.profile-card {
+  background-color: #fff;
+  margin: auto;
+  padding: 0;
+  width: 326px;
+  height: 376px;
+  border-radius: 20px;
+}
+
+.profile--top {
+  height: 140px;
+  background: url('/images/bg-pattern-card.svg') no-repeat center;
+  padding: 0;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+}
+
+.profile--head {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 100%;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.profile--head > img {
+  margin: -50px auto 0 auto;
+  width: 96px;
+  height: 96px;
+  border-radius: 50px;
+  border: 5px solid #fff;
+}
+
+.profile--name {
+  margin-bottom: 14px;
+}
+
+.profile--name > p {
+  margin: 0;
+}
+
+.profile--name > p:first-child {
+  margin: 18px 0;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.age,
+.location {
+  font-weight: 400;
+  color: var(--dark-g-blue);
+}
+
+.location {
+  font-size: 14px;
+}
+
+.profile--stats {
+  border-top: 1px solid #d4d4d4;
+  display: flex;
+  justify-content: space-around;
+  padding: 26px 16px;
+}
+
+.followers,
+.likes,
+.photos {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.followers > span,
+.likes > span,
+.photos > span {
+  font-weight: 700;
+}
+
+.followers > p,
+.likes > p,
+.photos > p {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  color: var(--dark-g-blue);
+}
+
+.attribution {
+  /* position: absolute;
+  top: 95%;
+  left: 10%; */
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    background-position: -70% 150%, 150% -80%;
+  }
+
+  .profile-card {
+    width: 350px;
+  }
+
+  .attribution {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
